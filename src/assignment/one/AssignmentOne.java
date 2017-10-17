@@ -1,6 +1,6 @@
 /*
- * 
- * 
+ * This program is a simple grade center desined to calculate overall grade averages
+ *      aswell as calculate and assign letter grades. 
  * 
  */
 package assignment.one;
@@ -8,7 +8,8 @@ package assignment.one;
 import java.util.Scanner;
 
 /**
- *
+ *The main method calls supporting methods and stores the information that is returned 
+ *      after receiving the needed information it then displays the information to the user.
  * @author CAIRD
  */
 public class AssignmentOne {
@@ -31,55 +32,61 @@ public class AssignmentOne {
     } //end of main method
 /**
  * This method calculates the grade average and returns it to main method.
- * 
+ * @return 
  */
     public static double getAverage(double g1,double g2,double g3,double g4,double g5)
     {   
-        return(g1+g2+g3+g4+g5)/5;
+        return(g1+g2+g3+g4+g5)/5; //adds the grade values together and divides them by 5
     }   
 /**
  * 
- * 
- * 
+ * This method calculates the letter grade using if/else logic and returns it
+ *      to the main method.
+     *@param grade
+     * @return  
  */    
     public static String letterGrade(double grade)
 {
-      if (grade >= 80 && grade <=100)
+      if (grade >= 80 && grade <=100) // If the grade is more than or equal to 80 and less than or equal to 100 return A.
             return ("A");
-        else if (grade >= 70 && grade <80) 
+        else if (grade >= 70 && grade <80) // If the grade is more than or equal to 70 and less than 80 return B.
             return ("B");
-        else if (grade >= 60 && grade <70)  
+        else if (grade >= 60 && grade <70)  // If the grade is more than or equal to 60 and less than 70 return C.
             return ("C");
-        else if (grade >= 50 && grade <60)  
+        else if (grade >= 50 && grade <60)  // If the grade is more than or equal to 50 and less than 60 return D.
             return ("D");                                    
-        else 
+        else                 // return F
             return ("F");
 }
  /**
- * 
- * 
+ * This method calculates the overall averages letter grade using if/else logic and 
+ *      returns it to the main method.
+ * @param totalAverage
+     * @return 
  */  
     public static String averageLetterGrade(double totalAverage){
         
-        if (totalAverage >= 80 && totalAverage <=100) 
+        if (totalAverage >= 80 && totalAverage <=100) // If the grade is more than or equal to 80 and less than or equal to 100 return A.
             return ("A");  
-        else if (totalAverage >= 70 && totalAverage < 80) 
+        else if (totalAverage >= 70 && totalAverage < 80) // If the grade is more than or equal to 70 and less than 80 return B.
             return ("B");
-        else if (totalAverage >= 60 && totalAverage <70) 
+        else if (totalAverage >= 60 && totalAverage <70) // If the grade is more than or equal to 60 and less than 70 return C.
             return ("C");
-        else if (totalAverage >= 50 && totalAverage < 60)  
+        else if (totalAverage >= 50 && totalAverage < 60)  // If the grade is more than or equal to 50 and less than 60 return D.
             return ("D");                                    
-        else 
+        else                        // return F
             return ("F"); 
     }
 /**
- * 
+ * This method initializes the keyboard to accept user input 
+ *      before prompting the user for grade values , it then returns those values 
+ *          to the main method.
  * @return 
  */
 public static double getGrade()
-{       Scanner keyboard = new Scanner(System.in);
-        System.out.print("Please enter a grade:");
-        return keyboard.nextDouble();
+{       Scanner keyboard = new Scanner(System.in); // create scanner object
+        System.out.print("Please enter a grade:"); // prompt for grade
+        return keyboard.nextDouble();      // return input as double
                 
     } //end of method largestNumber
 } // end of class
