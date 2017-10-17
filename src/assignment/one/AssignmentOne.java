@@ -36,7 +36,7 @@ public class AssignmentOne {
  */
     public static double getAverage(double g1,double g2,double g3,double g4,double g5)
     {   
-        return(g1+g2+g3+g4+g5)/5; //adds the grade values together and divides them by 5
+        return(g1+g2+g3+g4+g5)/5; //adds the grade values together before dividing them by 5 and returning the result to the main method
     }   
 /**
  * 
